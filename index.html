@@ -10,7 +10,7 @@
   <link rel="icon" type="image/png" href="imagenes/minion.png.jpg">
   <style>
     .cierre {
-      border: 2px solid transparent; /* Bordes invisibles inicialmente */
+      border: 6px solid transparent; /* Bordes invisibles inicialmente */
       transition: border-color 0.3s; /* Suaviza el cambio del color del borde */
     }
     .cierre:hover {
@@ -24,39 +24,40 @@
     <ul class="nav nav-pills row-fluid align-items-center">
       <div class="d-flex col-3">
         <li class="nav-item col-3">
-          <a class="nav-link" aria-current="page" href="#">
+          <a class="nav-link" aria-current="page" href="https://www.instagram.com/">
             <i class="fa-brands fa-instagram col-1" style="font-size: 30px; color: black"></i>
           </a>
         </li>
         <li class="nav-item col-4 justify-content-start">
-          <a class="nav-link" style="color:black" href="#"><h3>Instagram</h3></a>
+          <a class="nav-link" style="color:black" href="https://www.instagram.com/"><h3>Instagram</h3></a>
         </li>
       </div>
-      <div class="d-flex col-8 justify-content-end">
+      <div class="d-flex col-8 justify-content-end" >
         <li class="nav-item">
           <button class="btn btn-success col-12" type="button" data-bs-toggle="modal" data-bs-target="#createPostModal" aria-expanded="false">
             Create a New Post
           </button> 
-          <div class="modal fade col-12" id="createPostModal" tabindex="-1" role="dialog" aria-labelledby="createPostModalLabel" aria-hidden="true">
+          <div class="modal fade col-12" id="createPostModal" tabindex="0" role="dialog" aria-labelledby="createPostModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title col-8" id="createPostModalLabel">Create a new post</h5>
-                  <button type="button" class="col-6  cierre justify-content-end" data-bs-dismiss="modal" style="border:none;background-color: white; font-size: 30px;" aria-label="Close">
+                <div class="modal-header ">
+                  <h5 class="modal-title col-10" id="createPostModalLabel">Create a new post</h5>
+                  <button type="button" class="col-1  cierre justify-content-end" data-bs-dismiss="modal" style="background-color: white; font-size: 25px;height:50px" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body ">
                   <form>
                     <div class="form-group">
                       <label for="addPost">Caption:</label>
-                      <input type="text" class="form-control" id="addPost" name="addPost" placeholder="Add post">
+                      <input type="text" class="form-control" id="addPost" name="addPost" placeholder="Add post" style="height:100px;margin:10px;">
                     </div>
                     <div class="form-group">
                       <div class="d-flex justify-content-between align-items-center">
                         <div>
-                          <i class="fa fa-camera" aria-hidden="true" style="font-size: 15px;"></i>
-                          <i class="fa-solid fa-location-dot"></i>
+                          <a class="nav-link" style="color:black" href="https://www.instagram.com/">
+                          <i class="fa fa-camera" aria-hidden="true" style="font-size: 20px;"></i>
+                          <i class="fa-solid fa-location-dot" style="font-size: 20px;"></i></a>
                         </div>
                         <div>
                           <button type="submit" class="btn btn-secondary">Closed</button>
@@ -70,7 +71,7 @@
             </div>
           </div>
         </li>
-        <div class="btn-group col-2" role="group" aria-label="Button group with nested dropdown">
+        <div class="btn-group col-1" role="group" aria-label="Button group with nested dropdown">
  
           
             <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-gear" style="font-size: 20px"></i>
@@ -78,10 +79,16 @@
         
             </button>
             <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-              <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-              <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-              <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+              
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Accesibility</a></li>
+              
+              <li><hr class="dropdown-divider"></li>
+
+              <li><a class="dropdown-item" href="#" style="color:red">Privacy and data</a></li>
             </ul>
+            
           
         </div>
         
@@ -97,6 +104,18 @@
         </li>-->
       </div>
     </ul>
+    <div class=" row d-flex flex-column align-items-center">
+      <div class="col-3">
+        <div class="card" style="width: 18rem;">
+          <img src="imagenes/minion.png.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Minion</h5>
+            <p class="card-text">Minion is a yellow creature that is very funny and likes to eat bananas.</p>
+            <a href="#" class="btn btn-primary">Go to profile</a>
+          </div>
+        </div>
+      </div>
+      
   </div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
