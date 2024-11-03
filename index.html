@@ -4,103 +4,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
   <title>Feed-Insta</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/4d7c642ba9.js" crossorigin="anonymous"></script>
   <link rel="icon" type="image/png" href="imagenes/minion.png.jpg">
-  <style>
-    .cierre {
-      border: 6px solid transparent; /* Bordes invisibles inicialmente */
-      transition: border-color 0.3s; /* Suaviza el cambio del color del borde */
-    }
-    .cierre:hover {
-      background-color: rgb(37, 37, 37);
-      border: 2px solid black;
-    }
-    .icono-hover:hover {
-      color: blue;
-      transition: color 1.5s; /* Suaviza el cambio del color del icono */
-    }
-    .icono-activo {
-      color: blue; /* Color al hacer clic */
-    }
-    .icono-negro {
-      color: black
-    }
-    
-  </style>
+  
 </head>
 
   <div class="container-fluid">
     <ul class="nav nav-pills row-fluid align-items-center ">
-      <div class="d-flex col-3">
-        <li class="nav-item col-2">
-          <a class="nav-link" aria-current="page" href="https://www.instagram.com/">
-            <i class="fa-brands fa-instagram col-1" style="font-size: 30px; color: black"></i>
-          </a>
-        </li>
-        <li class="nav-item col-4 justify-content-start">
-          <a class="nav-link" style="color:black" href="https://www.instagram.com/"><h3>Instagram</h3></a>
-        </li>
-      </div>
-      <div class="d-flex col-8 justify-content-end" >
-        <li class="nav-item">
-          <button class="btn btn-success col-12" type="button" data-bs-toggle="modal" data-bs-target="#createPostModal" aria-expanded="false">
-            Create a New Post
-          </button> 
-          <div class="modal fade col-12" id="createPostModal" tabindex="0" role="dialog" aria-labelledby="createPostModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header ">
-                  <h5 class="modal-title col-10" id="createPostModalLabel">Create a new post</h5>
-                  <button type="button" class="col-1  cierre justify-content-end" data-bs-dismiss="modal" style="background-color: white; font-size: 25px;height:50px" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body ">
-                  <form>
-                    <div class="form-group">
-                      <label for="addPost">Caption:</label>
-                      <input type="text" class="form-control" id="addPost" name="addPost" placeholder="Add post" style="height:100px;margin:10px;">
-                    </div>
-                    <div class="form-group">
-                      <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                          <a class="nav-link" style="color:black" href="https://www.instagram.com/">
-                          <i class="fa fa-camera" aria-hidden="true" style="font-size: 20px;"></i>
-                          <i class="fa-solid fa-location-dot" style="font-size: 20px;"></i></a>
-                        </div>
-                        <div>
-                          <button type="submit" class="btn btn-secondary">Closed</button>
-                          <button type="button" class="btn btn-success">Publish</button>
+      <li class="nav-item col-3">
+        <div class="d-flex">
+          <div class="col-2">
+            <a class="nav-link icon-insta" aria-current="page" href="https://www.instagram.com/" name="enlace" title="Instagram">
+              <i class="fa-brands fa-instagram col-1 icon-insta" ></i>
+            </a>
+          </div>
+          <div class="col-4 justify-content-start">
+            <a class="nav-link icon-insta palabra-insta" style="color:black" href="https://www.instagram.com/"><h3>Instagram</h3></a> <!--Le añado style en linea porque no se coloca de color negro con una clase .palabra-insta-->
+          </div>
+        </div>
+      </li>
+      <li class="nav-item col-8 new-post">
+        <div class="d-flex justify-content-end">
+          <div class="col-12 new-post">
+            <button class="btn btn-success new-post-verde" type="button" data-bs-toggle="modal" data-bs-target="#createPostModal" aria-expanded="false">
+              Create a New Post
+            </button> 
+            <div class="modal fade" id="createPostModal" tabindex="0" role="dialog" aria-labelledby="createPostModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header ">
+                    <h5 class="modal-title col-10" id="createPostModalLabel">Create a new post</h5>
+                    <button type="button" class="col-1  cierre justify-content-end" data-bs-dismiss="modal" >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body ">
+                    <form>
+                      <div class="form-group">
+                        <label for="addPost">Caption:</label><!--El for tiene que coincidir con el id de su input-->
+                        <input type="text" class="form-control" id="addPost" name="addPost" placeholder="Add post" >
+                      </div>
+                      <div class="form-group">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div>
+                            <a class="nav-link palabra-insta" style="color:black" href="https://www.instagram.com/"><!--ponemos style para forzar el color a negro-->
+                            <i class="fa fa-camera palabra-insta" aria-hidden="true" style="font-size: 20px;"></i>
+                            <i class="fa-solid fa-location-dot" style="font-size: 20px;"></i></a>
+                          </div>
+                          <div>
+                            <button type="submit" class="btn btn-secondary">Cerrar</button>
+                            <button type="button" class="btn btn-success">Publicar</button>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </form>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </li>
-        <div class="btn-group col-1" role="group" aria-label="Button group with nested dropdown">
-          <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-gear" style="font-size: 20px"></i>
-          </button>
-            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-              
-              <li><a class="dropdown-item" href="#">Profile</a></li>
-              <li><a class="dropdown-item" href="#">Profile</a></li>
-              <li><a class="dropdown-item" href="#">Accesibility</a></li>
-              
-              <li><hr class="dropdown-divider"></li>
+          <div class="btn-group col-1" role="group" aria-label="Button group with nested dropdown">
+            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-gear" style="font-size: 20px"></i>
+            </button>
+              <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                
+                <li><hr class="dropdown-divider"></li>
 
-              <li><a class="dropdown-item" href="#" style="color:red">Privacy and data</a></li>
-            </ul>
-            
-          
+                <li><a class="dropdown-item" href="#" style="color:red">Privacy and data</a></li>
+              </ul>
+          </div>
         </div>
-        
-       
-      </div>
+      </li>
     </ul>
     <div class="row d-flex flex-row align-items-center" style="margin:5px;">
       <div class="col-6 d-flex justify-content-end align-items-center">
@@ -115,20 +96,7 @@
       </div>
     </div>
     
-    
-    
-    <!--<div class="row d-flex flex-row align-items-center" style="margin:5px;">
-      <div class="col-6 d-flex justify-content-end align-items-center">
-        <a href="#photo-collage" class="compact " style="color: black; "> 
-          <i class="fa-solid fa-table-cells icono-hover" style="font-size: 30px; "  onclick="this.classList.toggle('icono-activo')"></i>
-        </a>
-      </div>
-      <div class="col-2 d-flex justify-content-start align-items-center">
-        <a href="#card-carousel" class="compact " style="color: black; ">
-          <i class="fa fa-arrow-circle-down icono-hover" style="font-size: 30px;"  onclick="this.classList.toggle('icono-activo')"></i>
-        </a>
-      </div>
-    </div>-->
+  
     
         
     <div class=" row d-flex flex-column align-items-center" style="margin:5px;">
@@ -143,7 +111,7 @@
           <img src="imagenes\barco1.jpg" class="card-img-top" style="border:solid 1px black; border-top:0; border-radius:0" alt="...">
           <div class="card-body" style="border:solid 1px black">
             
-            <p class="card-text" >Hace muchos años, en un lugar lejano, proximo a la actual Dinamarca, convivian en paz campesinos y señores feudales. Pero llego una epoca de escased, frio y decadencia. Los campesinos hartos de no tener que llevarse a la boca, decidieron alzarse en armas en contra de sus señores feudales. Tal fue el exito, que ya no volvieron a tierra firme, botaron sus ligeros Drakars al mar en busca de nuevos tesoros...</p>
+            <p class="card-text p-3" >Hace muchos años, en un lugar lejano, proximo a la actual Dinamarca, convivian en paz campesinos y señores feudales. Pero llego una epoca de escased, frio y decadencia. Los campesinos hartos de no tener que llevarse a la boca, decidieron alzarse en armas en contra de sus señores feudales. Tal fue el exito, que ya no volvieron a tierra firme, botaron sus ligeros Drakars al mar en busca de nuevos tesoros...</p>
             
           </div>
         </div>
