@@ -99,7 +99,7 @@
     </div>
     
   
-    
+  <!-- Ahora van las imagenes, se duplica el código tanto como fotografias que tengo--TENGO QUE CAMBIAR EL SRC DE CADA IMG Y COLOCAR DIFERENTE TEXTO--> 
         
     <div class=" row d-flex flex-column align-items-center m-1">
       <div class="col-4">
@@ -342,11 +342,12 @@
         
   </div>
   
-
+ <!-- Este script es una funcion tooggleIcon, que lo que hace es seleccionar todas las clases-->
   <script>
     function toggleIcon(icon) {
-      // Restablecer todos los iconos a color negro
+      // funcion que recibe parametro icon, que es con el que se inter-actua
       document.querySelectorAll('.icono-hover').forEach(function(el) {
+      //se selecciona todos los elementos con clase .icono-hover. Se itera sobre cada elemento con forEach  
         el.classList.remove('icono-activo');
         el.classList.add('icono-negro');
       });
