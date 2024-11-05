@@ -3,7 +3,9 @@
     justify-content: end;
 }
 .cierre {
-    background-color: white; font-size: 25px;height:50px
+    background-color: white; 
+    font-size: 25px;
+    height:50px;
     flex-direction:row;
     justify-content: end;
     border: 6px solid transparent; /* Bordes invisibles inicialmente */
@@ -35,3 +37,10 @@
     color: black; 
     font-size: 20px;
   }
+  .palabra-insta:hover {
+    text-decoration: none;
+    color: black;
+  }
+  .custom-width {
+     width: 30rem;
+     }
