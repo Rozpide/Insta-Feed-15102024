@@ -16,43 +16,46 @@
         <div class="d-flex col-3">
           <li class="nav-item col-2">
             <a class="nav-link" aria-current="page" href="https://www.instagram.com/">
-              <i class="fa-brands fa-instagram col-1" style="font-size: 30px; color: black"></i>
+              <i class="fa-brands fa-instagram col-1 fs-1 text-dark" ></i>
             </a>
           </li>
           <li class="nav-item col-4 justify-content-start">
-            <a class="nav-link" style="color:black" href="https://www.instagram.com/"><h3>Instagram</h3></a>
+            <a class="nav-link text-dark"  href="https://www.instagram.com/"><h3>Instagram</h3></a>
           </li>
         </div>
-        <div class="d-flex col-8 justify-content-end" >
-          <li class="nav-item">
+        <div class="nav-item col-8 new-post" >
+          <li class="d-flex justify-content-end">
+
+            <div class="col-12 new-post">
+
             <button class="btn btn-success col-12" type="button" data-bs-toggle="modal" data-bs-target="#createPostModal" aria-expanded="false">
-              Create a New Post
+             Crea Nuevo Post
             </button> 
             <div class="modal fade col-12" id="createPostModal" tabindex="0" role="dialog" aria-labelledby="createPostModalLabel" aria-hidden="true">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-header ">
-                    <h5 class="modal-title col-10" id="createPostModalLabel">Create a new post</h5>
-                    <button type="button" class="col-1  cierre justify-content-end" data-bs-dismiss="modal" style="background-color: white; font-size: 25px;height:50px" aria-label="Close">
+                    <h5 class="modal-title col-10" id="createPostModalLabel">Crea Nuevo Post</h5>
+                    <button type="button" class="col-1  cierre justify-content-end bg-white fs-2 text-dark height-50" data-bs-dismiss="modal"  aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
                   <div class="modal-body ">
                     <form>
                       <div class="form-group">
-                        <label for="addPost">Caption:</label>
-                        <input type="text" class="form-control" id="addPost" name="addPost" placeholder="Add post" style="height:100px;margin:10px;">
+                        <label for="addPost">Descripción:</label>
+                        <input type="text" class="form-control m-2 height-100" id="addPost" name="addPost" placeholder="Añade Nuevo Post Aqui" >
                       </div>
                       <div class="form-group">
                         <div class="d-flex justify-content-between align-items-center">
                           <div>
-                            <a class="nav-link" style="color:black" href="https://www.instagram.com/">
-                            <i class="fa fa-camera" aria-hidden="true" style="font-size: 20px;"></i>
-                            <i class="fa-solid fa-location-dot" style="font-size: 20px;"></i></a>
+                            <a class="nav-link text-dark"  href="https://www.instagram.com/">
+                            <i class="fa fa-camera fs-4" aria-hidden="true"></i>
+                            <i class="fa-solid fa-location-dot fs-4"></i></a>
                           </div>
                           <div>
-                            <button type="submit" class="btn btn-secondary">Closed</button>
-                            <button type="button" class="btn btn-success">Publish</button>
+                            <button type="submit" class="btn btn-secondary">Cerrar</button>
+                            <button type="button" class="btn btn-success">Publcar</button>
                           </div>
                         </div>
                       </div>
@@ -60,35 +63,36 @@
                   </div>
                 </div>
               </div>
+              </div>
             </div>
           </li>
           <div class="btn-group col-1" role="group" aria-label="Button group with nested dropdown">
-            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-gear" style="font-size: 20px"></i>
+            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle fs-5" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-gear" ></i>
             </button>
               <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
                 
                 <li><a class="dropdown-item" href="#">Profile</a></li>
                 <li><a class="dropdown-item" href="#">Profile</a></li>
                 <li><a class="dropdown-item" href="#">Accesibility</a></li>
-             <!--Linea divisoria en Bootstrap-->   
+             <!--Linea divisoria en Bootstrap dentro del -->   
                 <li><hr class="dropdown-divider"></li>
   
-                <li><a class="dropdown-item" href="#" style="color:red">Privacy and data</a></li>
+                <li><a class="dropdown-item text-danger"  href="#" >Privacy and data</a></li>
               </ul>
               
             </div>
             
         </div>
       </ul>
-    <div class="row d-flex flex-row align-items-center" style="margin:5px;">
+    <div class="row d-flex flex-row align-items-center m-1" >
       <div class="col-6 d-flex justify-content-end align-items-center">
-        <a href="card-carousel.html" class="compact" style="color: black;">
-          <i class="fa-solid fa-table-cells icono-hover icono-negro" style="font-size: 30px;" onclick="toggleIcon(this)"></i>
+        <a href="card-carousel.html" class="compact text-dark" >
+          <i class="fa-solid fa-table-cells icono-hover icono-negro fs-1"  onclick="toggleIcon(this)"></i>
         </a>
       </div>
       <div class="col-2 d-flex justify-content-start align-items-center">
-        <a href="index.html" class="compact" style="color: black;">
-          <i class="fa fa-arrow-circle-down icono-hover icono-negro" style="font-size: 30px;" onclick="toggleIcon(this)"></i>
+        <a href="index.html" class="compact text-dark">
+          <i class="fa fa-arrow-circle-down icono-hover icono-negro fs-1"  onclick="toggleIcon(this)"></i>
         </a>
       </div>
     </div>
